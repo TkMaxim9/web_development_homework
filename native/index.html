@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма авторизации</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать</h1>
+</header>
+
+<main>
+    <form id="loginForm" aria-labelledby="formTitle">
+        <h2 id="formTitle">Авторизация</h2>
+
+        <div class="social-login">
+            <button type="button" class="social-btn">Войти через VK</button>
+            <button type="button" class="social-btn">Войти через Google</button>
+        </div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required minlength="6" aria-required="true" />
+
+        <label>
+            <input type="checkbox" id="remember" /> Запомнить меня
+        </label>
+
+        <button type="submit" id="loginBtn">Войти</button>
+
+        <p id="message" role="alert"></p>
+    </form>
+</main>
+
+<footer>
+    <p>2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
