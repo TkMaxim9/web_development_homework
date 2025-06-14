@@ -1,8 +1,27 @@
 /* Переопределение стилей*/
-body, h1, h2, label, input, button {
+body,
+h1,
+h2,
+label,
+input,
+button {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #222;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 input {
@@ -17,14 +36,15 @@ body {
     min-height: 100vh;
 }
 
-header, footer {
+header,
+footer {
     background-color: #333;
     color: white;
     padding: 1rem;
     text-align: center;
 }
 
-header h1{
+header h1 {
     color: white;
 }
 
@@ -41,7 +61,7 @@ form {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     display: flex;
@@ -50,13 +70,13 @@ form {
 }
 
 /* Кнопки соц. сетей */
-.social-login{
+.social-login {
     display: flex;
     gap: 10px;
 }
 
 .social-btn {
-    background: #4267B2;
+    background: #4267b2;
     color: white;
     border: none;
     padding: 0.75rem;
@@ -69,15 +89,18 @@ form {
 }
 
 /* Анимация при фокусе (transition)*/
-input, button {
+input,
+button {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 6px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
 }
 input:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 input[type="checkbox"] {
@@ -89,11 +112,21 @@ input[type="checkbox"] {
 
 /* keyframe-анимация (применяется в js скрипте)*/
 @keyframes shake {
-    0% { transform: translateX(0px); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0px); }
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 .shake {
     animation: shake 0.3s;
@@ -125,11 +158,11 @@ button:active {
 .social-login > button {
     width: 100%;
 }
-input[type="email"] {
+input[type='email'] {
     background-color: #f9f9f9;
 }
 [required] {
-    border-left: 4px solid #007BFF;
+    border-left: 4px solid #007bff;
 }
 
 /* Media Queries*/
@@ -137,7 +170,8 @@ input[type="email"] {
     form {
         padding: 0.7rem;
     }
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 1.2rem;
     }
 }
@@ -146,4 +180,3 @@ input[type="email"] {
         font-size: 0.9rem;
     }
 }
-
