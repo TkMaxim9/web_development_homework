@@ -12,16 +12,14 @@ interface Props {
 }
 
 const InputField: React.FC<Props> = ({ name, label, type, value, onChange, required, minLength }) => {
-    // Создаем уникальный id на основе name
     const inputId = `input-${name}`;
 
     return (
         <>
-            {/* Используем htmlFor для связи с id инпута */}
             <label htmlFor={inputId}>{label}</label>
             <input
-                id={inputId} // Устанавливаем id
-                name={name} // Атрибут name тоже полезен для форм
+                id={inputId}
+                name={name}
                 type={type}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
